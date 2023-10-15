@@ -57,3 +57,11 @@ keymap("v", ">", ">gv", opts)
 -- Comment
 keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle.linewise.current()<CR>", opts)
 keymap("x", "<leader>/", "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>", opts)
+
+-- Move lines
+keymap("n", "<A-j>", ":m .+1<CR>==")
+keymap("n", "<A-k>", ":m .-2<CR>==")
+keymap("i", "<A-j>", "<Esc>:m .+1<CR>==gi")
+keymap("i", "<A-k>", "<Esc>:m .-2<CR>==gi")
+keymap("v", "<A-j>", ":m '>+1<CR>gv=gv")
+keymap("v", "<A-k>", ":m '<-2<CR>gv=gv")

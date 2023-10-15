@@ -13,12 +13,12 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-	"rebelot/kanagawa.nvim",
-	{
-		'nvim-telescope/telescope.nvim',
-		tag = '0.1.2',
-		dependencies = { 'nvim-lua/plenary.nvim' }
-	},
+  "rebelot/kanagawa.nvim",
+  {
+    "nvim-telescope/telescope.nvim",
+    tag = "0.1.2",
+    dependencies = { "nvim-lua/plenary.nvim" }
+  },
   {
     "nvim-tree/nvim-tree.lua",
     version = "*",
@@ -31,23 +31,23 @@ require("lazy").setup({
     end,
   },
   {
-    'romgrk/barbar.nvim',
+    "romgrk/barbar.nvim",
     dependencies = {
-      'lewis6991/gitsigns.nvim',
-      'nvim-tree/nvim-web-devicons',
+      "lewis6991/gitsigns.nvim",
+      "nvim-tree/nvim-web-devicons",
     },
     init = function() vim.g.barbar_auto_setup = false end,
     opts = {
       animation = true,
       insert_at_end = true,
     },
-    version = '^1.0.0',
+    version = "^1.0.0",
   },
   {
     "numToStr/Comment.nvim",
     event = "BufReadPost",
     opts = {
-	    padding = true,
+      padding = true,
     },
   },
   {
@@ -57,9 +57,44 @@ require("lazy").setup({
       require("ibl").setup()
     end,
   },
+  {
+    "windwp/nvim-autopairs",
+    event = "InsertEnter",
+    config = function()
+      require("configs.autopairs")
+    end,
+  },
+  {
+    "L3MON4D3/LuaSnip",
+    version = "v2.*",
+    build = "make install_jsregexp"
+  },
+  {
+    'hrsh7th/nvim-cmp',
+    config = function ()
+      require'cmp'.setup {
+        snippet = {
+          expand = function(args)
+            require'luasnip'.lsp_expand(args.body)
+          end
+        },
+        sources = {
+          { name = 'luasnip' },
+        },
+      }
+    end
+  },
+  {
+    'saadparwaiz1/cmp_luasnip'
+  },
+  {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  },
 })
 
 require "configs.configs"
 require "configs.colorscheme"
 require "configs.keybinds"
-
+require "configs.luasnip"
+require "configs.lualine"
