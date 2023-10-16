@@ -20,7 +20,7 @@ keymap('n', '<leader>e', ":NvimTreeToggle<CR>", opts)
 -- BufferLine
 keymap('n', '<A-,>', "<Cmd>BufferMovePrevious<CR>", opts)
 keymap('n', '<A-.>', "<Cmd>BufferMoveNext<CR>", opts)
-keymap('n', '<C-q>', "<Cmd>BufferClose<CR>", opts)
+keymap('n', '<leader>c', "<Cmd>BufferClose<CR>", opts)
 
 -- Navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
