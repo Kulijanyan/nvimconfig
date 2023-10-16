@@ -20,6 +20,10 @@ require("lazy").setup({
     dependencies = { "nvim-lua/plenary.nvim" }
   },
   {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate"
+  },
+  {
     "nvim-tree/nvim-tree.lua",
     version = "*",
     lazy = false,
@@ -52,10 +56,8 @@ require("lazy").setup({
   },
   {
     "lukas-reineke/indent-blankline.nvim",
-    event = "BufReadPost",
-    config = function()
-      require("ibl").setup()
-    end,
+    main = "ibl",
+    opts = {},
   },
   {
     "windwp/nvim-autopairs",
@@ -98,3 +100,6 @@ require "configs.colorscheme"
 require "configs.keybinds"
 require "configs.luasnip"
 require "configs.lualine"
+require "configs.treesitter"
+
+require("ibl").setup()

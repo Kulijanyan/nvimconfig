@@ -25,3 +25,12 @@ ls.add_snippets(
     ),
   }
 )
+ls.add_snippets(
+  "javascript",
+  {
+    ls.parser.parse_snippet(
+      "cl",
+      "console.log(\"[DEV] >>> \", ${1})\n"
+    ),
+  }
+)
