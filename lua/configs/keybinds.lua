@@ -21,6 +21,8 @@ keymap('n', '<leader>e', ":NvimTreeToggle<CR>", opts)
 keymap('n', '<A-,>', "<Cmd>BufferMovePrevious<CR>", opts)
 keymap('n', '<A-.>', "<Cmd>BufferMoveNext<CR>", opts)
 keymap('n', '<leader>c', "<Cmd>BufferClose<CR>", opts)
+keymap("n", "<S-l>", "<Cmd>BufferNext<CR>", opts)
+keymap("n", "<S-h>", "<Cmd>BufferPrevious<CR>", opts)
 
 -- Navigation
 keymap("n", "<C-h>", "<C-w>h", opts)
@@ -34,18 +36,11 @@ keymap("n", "<C-Down>", ":resize +2<CR>", opts)
 keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
--- Navigate buffers
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
-
 -- Save
 keymap("n", "<C-s>", ":w<CR>", opts)
 
 -- Clear highlights
 keymap("n", "<leader>h", "<cmd>nohlsearch<CR>", opts)
-
--- Close buffers
-keymap("n", "<S-q>", "<cmd>Bdelete!<CR>", opts)
 
 -- Search with <F4>
 keymap("n", "<F4>", "*", opts)
