@@ -96,10 +96,9 @@ require("lazy").setup({
 })
 
 require "configs.configs"
-require "configs.colorscheme"
-require "configs.keybinds"
 require "configs.luasnip"
 require "configs.lualine"
+require "configs.keybinds"
+require "configs.colorscheme"
+require "configs.indent_blankline"
 -- require "configs.treesitter"
-
-require("ibl").setup()

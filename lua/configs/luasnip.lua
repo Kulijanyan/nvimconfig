@@ -17,11 +17,19 @@ ls.add_snippets(
   {
     ls.parser.parse_snippet(
       "pd",
-      "print(f\"[DEV] >>> {${1}}\")\n"
+      "print(f\"[DEV] >>> {${1} = }\")\n"
+    ),
+    ls.parser.parse_snippet(
+      "pp",
+      "print(\"[DEV] >>> ${1}\")\n"
     ),
     ls.parser.parse_snippet(
       "rv",
       "raise ValueError('Testing')"
+    ),
+    ls.parser.parse_snippet(
+      "docs",
+      "\"\"\"\n\nParameters\n----------\n\nReturns\n-------\n\n\"\"\""
     ),
   }
 )
