@@ -42,3 +42,24 @@ ls.add_snippets(
     ),
   }
 )
+ls.add_snippets(
+  "html",
+  {
+    ls.parser.parse_snippet(
+      "b",
+      "<${1}></${1}>"
+    ),
+    ls.parser.parse_snippet(
+      "div",
+      "<div></div>"
+    ),
+    ls.parser.parse_snippet(
+      "divc",
+      "<div class=\"${1}\"></div>"
+    ),
+    ls.parser.parse_snippet(
+      "line",
+      "<hr>"
+    ),
+  }
+)
