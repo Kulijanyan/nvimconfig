@@ -13,16 +13,15 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+  -- Colorschemes
   "rebelot/kanagawa.nvim",
+  { "kepano/flexoki-neovim", name = "flexoki" },
+
   {
     "nvim-telescope/telescope.nvim",
     tag = "0.1.2",
     dependencies = { "nvim-lua/plenary.nvim" }
   },
-  -- {
-  --   "nvim-treesitter/nvim-treesitter",
-  --   build = ":TSUpdate"
-  -- },
   {
     "nvim-tree/nvim-tree.lua",
     version = "*",
@@ -86,9 +85,7 @@ require("lazy").setup({
       }
     end
   },
-  {
-    'saadparwaiz1/cmp_luasnip'
-  },
+  {'saadparwaiz1/cmp_luasnip'},
   {
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }

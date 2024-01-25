@@ -3,6 +3,7 @@
   "LuaSnip": { "branch": "master", "commit": "0b4950a237ce441a6a3a947d501622453f6860ea" },
   "barbar.nvim": { "branch": "master", "commit": "dd852401ee902745b67fc09a83d113b3fe82a96f" },
   "cmp_luasnip": { "branch": "master", "commit": "05a9ab28b53f71d1aece421ef32fee2cb857a843" },
+  "flexoki": { "branch": "main", "commit": "d960acfd671f37eafd05e97720dac0c9e14cac11" },
   "gitsigns.nvim": { "branch": "main", "commit": "ff01d34daaed72f271a8ffa088a7e839a60c640f" },
   "indent-blankline.nvim": { "branch": "master", "commit": "9301e434dd41154ffe5c3d5b8a5c9acd075ebeff" },
   "kanagawa.nvim": { "branch": "master", "commit": "c19b9023842697ec92caf72cd3599f7dd7be4456" },

@@ -13,7 +13,7 @@ require('lualine').setup {
   sections = {
     lualine_a = {'mode'},
     lualine_b = {'searchcount', 'selectioncount'},
-    lualine_c = {'filename'},
+    lualine_c = {{'filename', file_status = true, path = 1}},
     lualine_x = {'fileformat', 'filetype'},
     lualine_y = {'progress'},
     lualine_z = {'location'}
