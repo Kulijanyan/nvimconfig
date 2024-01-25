@@ -70,32 +70,30 @@ require("lazy").setup({
     version = "v2.*",
     build = "make install_jsregexp"
   },
+  "hrsh7th/nvim-cmp",
+  "saadparwaiz1/cmp_luasnip",
   {
-    'hrsh7th/nvim-cmp',
-    config = function ()
-      require'cmp'.setup {
-        snippet = {
-          expand = function(args)
-            require'luasnip'.lsp_expand(args.body)
-          end
-        },
-        sources = {
-          { name = 'luasnip' },
-        },
-      }
-    end
+    "nvim-lualine/lualine.nvim",
+    requires = { "nvim-tree/nvim-web-devicons", opt = true }
   },
-  {'saadparwaiz1/cmp_luasnip'},
-  {
-    'nvim-lualine/lualine.nvim',
-    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-  },
+  "mfussenegger/nvim-lint",
+  "lewis6991/nvim-lspconfig",
+  "hrsh7th/cmp-nvim-lsp",
 })
 
+-- Key bindings / shortcuts
+require "configs.keybinds"
+
+-- General configs
 require "configs.configs"
+require "configs.colorscheme"
+
+-- Plugin configs
+require "configs.lint"
+require "configs.cmp"
 require "configs.luasnip"
 require "configs.lualine"
-require "configs.keybinds"
-require "configs.colorscheme"
 require "configs.indent_blankline"
--- require "configs.treesitter"
+
+-- LSP
+require "configs.lsp"
