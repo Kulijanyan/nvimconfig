@@ -89,7 +89,6 @@ require "configs.configs"
 require "configs.colorscheme"
 
 -- Plugin configs
-require "configs.lint"
 require "configs.cmp"
 require "configs.luasnip"
 require "configs.lualine"
