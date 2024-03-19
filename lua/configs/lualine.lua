@@ -1,4 +1,10 @@
-require('lualine').setup {
+local status_ok, lualine = pcall(require, "lualine")
+if not status_ok then
+  vim.notify("Plugin \"lualine\" not found!")
+  return
+end
+
+lualine.setup {
   options = {
     icons_enabled = true,
     theme = 'auto',

@@ -8,7 +8,11 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 
 -- Telescope
-local telescope = require('telescope.builtin')
+local status_ok, telescope = pcall(require, "telescope.builtin")
+if not status_ok then
+  vim.notify("Plugin \"telescope.builtin\" not found!")
+  return
+end
 
 keymap('n', '<leader>ff', telescope.find_files, {})
 keymap('n', '<leader>fg', telescope.live_grep, {})
@@ -60,3 +64,6 @@ keymap("i", "<A-j>", "<Esc>:m .+1<CR>==gi")
 keymap("i", "<A-k>", "<Esc>:m .-2<CR>==gi")
 keymap("v", "<A-j>", ":m '>+1<CR>gv=gv")
 keymap("v", "<A-k>", ":m '<-2<CR>gv=gv")
+
+-- Mini
+keymap('n', '<leader>mt', ":lua MiniTrailspace.trim()<CR>", opts)

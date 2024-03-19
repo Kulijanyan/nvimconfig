@@ -26,12 +26,7 @@ require("lazy").setup({
     "nvim-tree/nvim-tree.lua",
     version = "*",
     lazy = false,
-    dependencies = {
-      "nvim-tree/nvim-web-devicons",
-    },
-    config = function()
-      require("nvim-tree").setup {}
-    end,
+    dependencies = { "nvim-tree/nvim-web-devicons" }
   },
   {
     "romgrk/barbar.nvim",
@@ -59,13 +54,6 @@ require("lazy").setup({
     opts = {},
   },
   {
-    "windwp/nvim-autopairs",
-    event = "InsertEnter",
-    config = function()
-      require("configs.autopairs")
-    end,
-  },
-  {
     "L3MON4D3/LuaSnip",
     version = "v2.*",
     build = "make install_jsregexp"
@@ -77,8 +65,12 @@ require("lazy").setup({
     requires = { "nvim-tree/nvim-web-devicons", opt = true }
   },
   "mfussenegger/nvim-lint",
-  "lewis6991/nvim-lspconfig",
+  "neovim/nvim-lspconfig",
   "hrsh7th/cmp-nvim-lsp",
+
+  -- Mini nvim
+  { 'echasnovski/mini.trailspace', version = false },
+  { 'echasnovski/mini.pairs', version = false },
 })
 
 -- Key bindings / shortcuts
@@ -93,6 +85,13 @@ require "configs.cmp"
 require "configs.luasnip"
 require "configs.lualine"
 require "configs.indent_blankline"
+require "configs.nvim_tree"
 
 -- LSP
 require "configs.lsp"
+
+-- Mini
+require "configs.mini"
+
+-- Custom functions
+require "custom.main"
