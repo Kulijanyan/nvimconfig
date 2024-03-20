@@ -4,7 +4,6 @@
 <ul>
   <li>NeoVim 0.9+ https://neovim.io/</li>
 </ul>
-</br>
 <h4>Post installation steps:</h4>
 <ul>
   <li>
