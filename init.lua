@@ -54,19 +54,21 @@ require("lazy").setup({
     opts = {},
   },
   {
+    "nvim-lualine/lualine.nvim",
+    requires = { "nvim-tree/nvim-web-devicons", opt = true }
+  },
+
+  {
     "L3MON4D3/LuaSnip",
     version = "v2.*",
     build = "make install_jsregexp"
   },
   "hrsh7th/nvim-cmp",
   "saadparwaiz1/cmp_luasnip",
-  {
-    "nvim-lualine/lualine.nvim",
-    requires = { "nvim-tree/nvim-web-devicons", opt = true }
-  },
   "mfussenegger/nvim-lint",
   "neovim/nvim-lspconfig",
   "hrsh7th/cmp-nvim-lsp",
+  {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
 
   -- Mini nvim
   { 'echasnovski/mini.trailspace', version = false },
@@ -87,8 +89,9 @@ require "configs.lualine"
 require "configs.indent_blankline"
 require "configs.nvim_tree"
 
--- LSP
+-- LSP and syntax
 require "configs.lsp"
+require "configs.treesitter"
 
 -- Mini
 require "configs.mini"
