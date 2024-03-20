@@ -1,5 +1,9 @@
 This is my own neovim build with plugins installed via Lazy
 
+Requirements:
+
+    - NeoVim 0.9+ https://neovim.io/
+
 Post installation steps:
 
     - Install https://github.com/BurntSushi/ripgrep for telescope (fuzzy find)
