@@ -65,9 +65,7 @@ require("lazy").setup({
   },
   "hrsh7th/nvim-cmp",
   "saadparwaiz1/cmp_luasnip",
-  "mfussenegger/nvim-lint",
   "neovim/nvim-lspconfig",
-  "hrsh7th/cmp-nvim-lsp",
   {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
 
   -- Mini nvim
