@@ -16,6 +16,12 @@
 </details>
 <details>
   <summary>Install any python syntax checker for LSP. Examples:</summary>
-  <p>Pyflakes - <pre>$ pip install --upgrade pyflakes</pre></p>
-  <p>Flake8 - <pre>$ pip install --upgrade flake8</pre></p>
+  <p>
+    Pyflakes - https://github.com/PyCQA/pyflakes
+    <pre>$ pip install --upgrade pyflakes</pre>
+  </p>
+  <p>
+    Flake8 - https://github.com/PyCQA/flake8
+    <pre>$ pip install --upgrade flake8</pre>
+  </p>
 </details>
