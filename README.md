@@ -6,22 +6,30 @@
 </ul>
 </br>
 <h4>Post installation steps:</h4>
-<details>
-  <summary>Install https://github.com/BurntSushi/ripgrep for telescope (fuzzy find)</summary>
-  <p><pre>$ sudo apt-get install ripgrep</pre></p>
-</details>
-<details>
-  <summary>Install https://github.com/python-lsp/python-lsp-server for LSP</summary>
-  <p><pre>$ pip install --upgrade python-lsp-server</pre></p>
-</details>
-<details>
-  <summary>Install any python syntax checker for LSP. Examples:</summary>
-  <p>
-    Pyflakes - https://github.com/PyCQA/pyflakes
-    <pre>$ pip install --upgrade pyflakes</pre>
-  </p>
-  <p>
-    Flake8 - https://github.com/PyCQA/flake8
-    <pre>$ pip install --upgrade flake8</pre>
-  </p>
-</details>
+<ul>
+  <li>
+    <details>
+      <summary>Install https://github.com/BurntSushi/ripgrep for telescope (fuzzy find)</summary>
+      <p><pre>$ sudo apt-get install ripgrep</pre></p>
+    </details>
+  </li>
+  <li>
+    <details>
+      <summary>Install https://github.com/python-lsp/python-lsp-server for LSP</summary>
+      <p><pre>$ pip install --upgrade python-lsp-server</pre></p>
+    </details>    
+  </li>
+  <li>
+    <details>
+      <summary>Install any python syntax checker for LSP. Examples:</summary>
+      <p>
+        Pyflakes - https://github.com/PyCQA/pyflakes
+        <pre>$ pip install --upgrade pyflakes</pre>
+      </p>
+      <p>
+        Flake8 - https://github.com/PyCQA/flake8
+        <pre>$ pip install --upgrade flake8</pre>
+      </p>
+    </details>    
+  </li>
+</ul>
