@@ -2,7 +2,7 @@ This is my own neovim build with plugins installed via Lazy
 
 Requirements:
 
-    - NeoVim 0.9+ https://neovim.io/
+    - NeoVim 0.9+ <a href="https://neovim.io/">https://neovim.io/</a>
 
 Post installation steps:
 
