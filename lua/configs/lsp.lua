@@ -4,7 +4,15 @@ if not status_ok then
   return
 end
 
-lspconfig.pylsp.setup({})
+local status_ok, capabilities = pcall(require, "cmp_nvim_lsp")
+if not status_ok then
+  vim.notify("Plugin \"cmp_nvim_lsp\" not found!")
+  return
+end
+
+lspconfig.pylsp.setup{
+  capabilities=capabilities.default_capabilities()
+}
 
 -- Global mappings.
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)

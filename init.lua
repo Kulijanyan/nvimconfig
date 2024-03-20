@@ -64,8 +64,9 @@ require("lazy").setup({
     build = "make install_jsregexp"
   },
   "hrsh7th/nvim-cmp",
-  "saadparwaiz1/cmp_luasnip",
+  "hrsh7th/cmp-nvim-lsp",
   "neovim/nvim-lspconfig",
+  "saadparwaiz1/cmp_luasnip",
   {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
 
   -- Mini nvim
