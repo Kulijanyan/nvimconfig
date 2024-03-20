@@ -1,8 +1,12 @@
-This is my own neovim build with plugins installed via Lazy
+<h3>This is my own neovim build with plugins installed via Lazy</h3>
 
-Requirements:
+<h5>Requirements:</h5>
+<ul>
+  <li>NeoVim 0.9+ <a href="https://neovim.io/">https://neovim.io/</a> https://neovim.io/ </li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>  
 
-<h1>NeoVim 0.9+ <a href="https://neovim.io/">https://neovim.io/</a></h1>
 
 Post installation steps:
 
