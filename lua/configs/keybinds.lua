@@ -67,3 +67,6 @@ keymap("v", "<A-k>", ":m '<-2<CR>gv=gv")
 
 -- Mini
 keymap('n', '<leader>mt', ":lua MiniTrailspace.trim()<CR>", opts)
+
+-- Refresh syntax highlight
+keymap('n', '<leader>sr', "::syntax sync fromstart<CR>", opts)

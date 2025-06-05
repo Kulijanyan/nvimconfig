@@ -67,3 +67,24 @@ luasnip.add_snippets(
     ),
   }
 )
+luasnip.add_snippets(
+  "htmlangular",
+  {
+    luasnip.parser.parse_snippet(
+      "b",
+      "<${1}></${1}>"
+    ),
+    luasnip.parser.parse_snippet(
+      "div",
+      "<div></div>"
+    ),
+    luasnip.parser.parse_snippet(
+      "divc",
+      "<div class=\"${1}\"></div>"
+    ),
+    luasnip.parser.parse_snippet(
+      "line",
+      "<hr>"
+    ),
+  }
+)
