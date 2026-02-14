@@ -96,6 +96,18 @@ require("lazy").setup({
     },
     cmd = { "CsvViewEnable", "CsvViewDisable", "CsvViewToggle" },
   },
+
+  -- Test coverage
+  "nvim-lua/plenary.nvim",
+  {
+    "andythigpen/nvim-coverage",
+    version = "*",
+    config = function()
+      require("coverage").setup({
+        auto_reload = true,
+      })
+    end,
+  },
 })
 
 -- Key bindings / shortcuts
