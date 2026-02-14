@@ -18,9 +18,12 @@ require("lazy").setup({
   { "kepano/flexoki-neovim", name = "flexoki" },
 
   {
-    "nvim-telescope/telescope.nvim",
-    tag = "0.1.2",
-    dependencies = { "nvim-lua/plenary.nvim" }
+    'nvim-telescope/telescope.nvim', version = '*',
+    dependencies = {
+        'nvim-lua/plenary.nvim',
+        -- optional but recommended
+        { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make' },
+    }
   },
   {
     "nvim-tree/nvim-tree.lua",
@@ -67,7 +70,11 @@ require("lazy").setup({
   "hrsh7th/cmp-nvim-lsp",
   "neovim/nvim-lspconfig",
   "saadparwaiz1/cmp_luasnip",
-  {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
+  {
+    'nvim-treesitter/nvim-treesitter',
+    lazy = false,
+    build = ':TSUpdate'
+  },
 
   -- Mini nvim
   { 'echasnovski/mini.trailspace', version = false },

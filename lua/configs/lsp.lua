@@ -1,36 +1,39 @@
-local status_ok, lspconfig = pcall(require, "lspconfig")
-if not status_ok then
-  vim.notify("Plugin \"lspconfig\" not found!")
-  return
+-- Capabilities (nvim-cmp integration)
+local capabilities = vim.lsp.protocol.make_client_capabilities()
+
+local ok, cmp = pcall(require, "cmp_nvim_lsp")
+if ok then
+  capabilities = cmp.default_capabilities(capabilities)
+else
+  vim.notify('Plugin "cmp_nvim_lsp" not found!')
 end
 
-local status_ok, capabilities = pcall(require, "cmp_nvim_lsp")
-if not status_ok then
-  vim.notify("Plugin \"cmp_nvim_lsp\" not found!")
-  return
-end
+-- Configure pylsp
+vim.lsp.config("pylsp", {
+  capabilities = capabilities,
+})
 
-lspconfig.pylsp.setup{
-  capabilities=capabilities.default_capabilities()
-}
+-- Enable pylsp
+vim.lsp.enable("pylsp")
 
--- Global mappings.
+-------------------------------------------------
+-- Global diagnostic mappings
+-------------------------------------------------
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
 vim.keymap.set('n', '<leader>w', vim.diagnostic.setloclist)
 
--- Use LspAttach autocommand to only map the following keys
--- after the language server attaches to the current buffer
-vim.api.nvim_create_autocmd(
-  'LspAttach',
-  {
-    group = vim.api.nvim_create_augroup('UserLspConfig', {}),
-    callback = function(ev)
-      -- Buffer local mappings.
-      local opts = { buffer = ev.buf }
-      vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
-      vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
-      vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
-    end,
-  }
-)
+-------------------------------------------------
+-- LSP buffer-local mappings
+-------------------------------------------------
+vim.api.nvim_create_autocmd('LspAttach', {
+  group = vim.api.nvim_create_augroup('UserLspConfig', {}),
+  callback = function(ev)
+    local opts = { buffer = ev.buf }
+
+    vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+    vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+    vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
+  end,
+})
+
